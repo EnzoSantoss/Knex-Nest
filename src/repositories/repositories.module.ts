@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { RepositoriesService } from './repositories.service';
-import { RepositoriesController } from './repositories.controller';
+import { UserService } from './user/user.service';
+import { AddressService } from './address/address.service';
+import { PostService } from './post/post.service';
 
 @Module({
-  providers: [RepositoriesService],
-  exports: [RepositoriesService],
-  controllers: [RepositoriesController],
+  providers: [UserService, AddressService, PostService],
+  exports: [UserService, AddressService, PostService],
 })
 export class RepositoriesModule {}
